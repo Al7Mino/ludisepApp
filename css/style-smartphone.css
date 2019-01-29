@@ -1,0 +1,164 @@
+@media only screen and (max-width: 600px) {
+	.logo {
+		max-width: 100px;
+	}
+	.header-title h1 {
+		font-size: 38px;
+	}
+	.header-conn.flex {
+		flex-direction: column;
+	}
+	.header-conn .avatar-content {
+		margin-right: 0;
+	}
+	/*nav > ul > li > div:hover {
+		background-color: initial;
+	    padding: 0;
+	    border: none;
+	}*/
+	.message-accueil p, .presentation {
+		width: 80%;
+	}
+	.presentation {
+		margin: 50px auto 50px auto;		
+	}
+	#accueil .jeu_role > div {
+		flex-direction: column-reverse;
+	}
+	#accueil .jeu_societe > div {
+		flex-direction: column;
+	}
+	#accueil .jeu_role > div > div, #accueil .jeu_societe > div > div {
+		width: 100%;
+	}
+	#accueil .jeu_role aside, #accueil .jeu_societe aside {
+		width: 70%;
+	}
+	.activites.flex, .types-univers.flex {
+		flex-direction: column;
+	}
+	.activites .activite {
+		width: 100%;
+		margin-bottom: 2em;
+	}
+	.activites .activite:first-child {
+		padding-right: 0;
+	}
+	.activites .activite:last-child {
+		padding-left: 0;
+	}
+	.activite .border {
+		border-right: none;
+		border-left: none;
+		padding: 0;
+	}
+	footer {
+		height: 200px;
+	}
+	.message-univers h1, .message-univers p, .message-jeux h1, .message-jeux p {
+		width: 90%;
+	}
+	.types-univers {
+		width: 90%;
+	}
+	.types-univers > section {
+		max-width: 100%;
+		margin-bottom: 2em;
+	}
+	#jeux .jeu.odd .flex {
+		flex-direction: column-reverse;
+	}
+	#jeux .jeu.even .flex {
+		flex-direction: column;
+	}
+	#jeux .jeu img {
+		width: 50%;
+		margin-bottom: 1.5em;
+	}
+	#jeux .jeu p {
+		width: 100%;
+	}
+	iframe {
+		display: none;
+	}
+	#espace_membre div.connexion {
+		width: 100%;
+		flex-direction: column;
+	}
+	#espace_membre div.connexion > div {
+		width: 100%;
+	}
+	#espace_membre div.connexion > div:first-child {
+		border-right: none;
+	}
+	#inscription .content {
+		width: 90%;
+	}
+	.membres .avatar-content, .profil .img-avatar > div, .profil .img-avatar .select-img {
+		width: 75px;
+		height: 75px;
+	}
+	img.avatar {
+		width: 75px;
+	}
+	.personnages > div {
+		flex-direction: column;
+	}
+	.personnages .image-perso {
+		width: 100%;
+		text-align: center;
+	}
+	.personnages .image-perso img {
+		width: 25%;
+	}
+	.personnages .description-perso {
+		width: 100%;
+	}
+	.personnages .info-perso {
+		width: 100%;
+		margin-bottom: 1.5em;
+	}
+	.personnages form > div {
+		flex-direction: column;
+	}
+	.personnages form .item-1, .personnages form .item-2, .personnages form .item-3 {
+		width: 90%;
+	}
+	.personnages form textarea {
+		width: 100%;
+	}
+	.jc-bs3-container {
+		width: 90%;
+	}
+	#quete .jconfirm-content .flex {
+		flex-direction: column;
+	}
+	#quete .jconfirm-content .flex .description-perso, #quete .jconfirm-content .flex .info-perso {
+		width: 100%;
+	}
+	.menu {
+		height: 100px;
+	}
+	.menu img {
+		width: 50px;
+	    position: relative;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    margin-left: 10%;
+
+	}
+	nav > ul {
+		display: none;
+		height: unset;
+		padding-left: 10%;
+	}
+	nav .level-2 {
+		padding-left: 2em;
+	    list-style-type: initial;
+	    text-align: start;
+	    background-color: rgba(179,179,179,0.7);
+	    position: initial;
+	    width: unset;
+	    border: none;
+	}
+}

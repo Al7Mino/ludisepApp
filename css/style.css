@@ -1,0 +1,1314 @@
+
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+	font-family:"Ipanema Secco";
+	src:url("../font/Ipanema_Secco.eot?") format("eot"),url("../font/Ipanema_Secco.woff") format("woff"),url("../font/Ipanema_Secco.ttf") format("truetype"),url("../font/Ipanema_Secco.svg#IpanemaSecco") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+/* @font-face kit by Fonts2u (http://www.fonts2u.com) */ 
+@font-face {
+	font-family:"DrPoDecorRu";
+	src:url("../font/DRPODR__.eot?") format("eot"),url("../font/DRPODR__.woff") format("woff"),url("../font/DRPODR__.ttf") format("truetype"),url("../font/DRPODR__.svg#DrPoDecorRu") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+
+/************************************************************************************************************************
+
+														GLOBAL
+
+************************************************************************************************************************/
+
+
+
+/* ---------------------------------------------- STYLE PAR DÉFAUT --------------------------------------------------- */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 14px;
+    line-height: 1.5;
+    color: rgb(51,51,51);
+    background-color: #FAFAFA;
+}
+p {
+	margin-bottom: 16px;
+	text-align: justify;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+h2, h3, h4, h5 {
+	margin-bottom: 10px;
+}
+h2 {
+	font-size: 26px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 18px;
+}
+button, input, select, textarea {
+	font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+textarea {
+	resize: none;
+}
+
+button:disabled {
+	color: #b1b1b1 !important;
+	background-color: #ecf0f1 !important;
+	cursor: default !important;
+}
+
+/* ---------------------------------------------- CLASSES GLOBALES --------------------------------------------------- */
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.bouton {
+	background-color: white;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 1px -1px 5px;
+}
+.bouton:hover {
+	background-color: #2C9AB7;
+    color: white;
+    transition: ease-out 0.2s;
+    box-shadow: none;
+}
+
+.main-content {
+	margin-bottom: 50px !important;
+	margin-top: 50px !important;
+}
+
+.content {
+	width: 90%;
+	margin: auto;
+}
+
+.content-fit {
+	width: 50%;
+	margin: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.hide {
+	display: none !important;
+}
+
+.accroche {
+	font-weight: bold;
+}
+
+.border {
+	border: 1px solid #B3B3B3;
+	border: 1px solid #B3B3B3;
+	padding: 20px;
+	border-radius: 4px;
+}
+.border-lateral {
+	border-right: 1px solid #B3B3B3;
+    border-left: 1px solid #B3B3B3;
+    padding: 0 20px;
+}
+
+.box {
+	padding: 1em;
+	background-color: rgba(193,202,230,0.2);
+    margin: auto;
+    box-shadow: 1px -1px 10px;
+    border-radius: 4px;
+}
+
+.avatar-content {
+	overflow: hidden;
+    border-radius: 100%;
+}
+
+.credit {
+	margin-right: 1em;
+}
+.credit p {
+	text-align: right;
+	font-size: 10px !important;
+	margin-bottom: 0;
+}
+
+/*** Classes alternants le style des sections d'une page (Accueil, Univers, Jeux) ***/
+
+.even-part {
+	background-color: #2C9AB7;
+    padding: 50px 0;
+    box-shadow: 0px -5px 40px;
+}
+.even-part h1, .even-part h2, .even-part h3, .even-part h4, .even-part h5, .even-part h6 {
+	color: white;
+}
+.even-part p, .even-part ul {
+	color: #FAFAFA;
+}
+.odd-part {
+    margin: 50px auto;
+}
+
+/*** Style des images-boutons (modification, suppression, ...) ***/
+
+img.aide {
+	width: 12px;
+	height: auto;
+	margin-left: 2.1em;
+}
+
+img.edit, img.suppr {
+	height: auto;
+	margin-left: 1.5em;
+	cursor: pointer;
+}
+img.edit {
+	width: 20px;
+}
+img.edit:hover {
+	width: 40px;
+	transition: width 0.5s;
+}
+
+img.suppr {
+	width: 30px;
+}
+img.suppr:hover {
+	width: 50px;
+	transition: width 0.5s;
+}
+
+img.arrow {
+	width: 17px;
+	height: auto;
+	margin-left: 0.5em;
+	cursor: pointer;
+	-webkit-transition: -webkit-transform 0.4s;
+	-moz-transition: -moz-transform 0.4s;
+    -ms-transition: -ms-transform 0.4s;
+    -o-transition: -o-transform 0.4s;
+    transition: transform 0.4s;
+}
+.rotate {
+	-webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+img.important {
+	width: 40px;
+	margin-right: 15px;
+}
+
+/*** Fenêtre modale avec js-confirm ***/
+
+.jc-bs3-container {
+	width: 30%;
+	margin: auto;
+}
+
+
+
+/************************************************************************************************************************
+
+														HEADER
+
+************************************************************************************************************************/
+
+
+
+/* ------------------------------------------ STYLE GLOBALE SUR LE HEADER -------------------------------------------- */
+
+header a {
+	text-decoration: none;
+	color: black;
+	z-index: 1;
+}
+
+/* ------------------------------------------------ HAUT DU HEADER --------------------------------------------------- */
+
+/*** Style du conteneur ***/
+
+.first-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 10px 0 10px;
+	height: 175px;
+	background-color: #52bad5;
+	border-bottom: 3px solid #2C9AB7;
+}
+
+/*** Style des contenus ***/
+
+.logo {
+	max-width: 200px;
+	height: auto;
+}
+
+.header-title {
+	position: absolute;
+    width: 100%;
+}
+.header-title h1 {
+	font-family: "Ipanema Secco", "Helvetica Neue", sans-serif;
+	font-size: 60px;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	text-shadow: 2px -1px 1px black;
+	margin-bottom: 0;
+}
+.header-title h1:first-letter {
+	font-family:"DrPoDecorRu", "Ipanema Secco", "Helvetica Neue", sans-serif;
+	font-size: 1.7em;
+}
+
+header a.deconnexion {
+	font-size: 12px;
+	position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.header-conn .avatar-content, .header-conn .avatar-content > img {
+	width: 50px;
+}
+.header-conn .avatar-content {
+	height: 50px;
+	margin-right: 0.5em;
+}
+.header-conn span {
+    color: white;
+    font-family: "Ipanema Secco", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------- MENU DE NAVIGATION -------------------------------------------------- */
+
+/*** Style du menu de navigation principal ***/
+
+nav {
+	display: block;
+	background-color: #B3B3B3;
+	border-bottom: 3px solid #000000;
+}
+nav ul {
+	list-style-type: none;
+}
+nav > ul {
+	display: flex;
+	height: 150px;
+	margin: 0px;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}
+/*nav > ul > li {
+	position: relative;
+	top: 45%;
+}*/
+/*nav > ul > li > div:hover {
+    background-color: #c9c9c9;
+    padding: 7px 15px;
+    border-radius: 4px;
+    border: solid 1px #939393;
+    transition: ease-out 0.2s;
+}*/
+/*.hover-menu {
+	background-color: #c9c9c9;
+    padding: 7px 15px;
+    border-radius: 4px;
+    border: solid 1px #939393;
+    transition: ease-out 0.2s;
+}*/
+/*.menu-border {
+	border-radius: 4px 4px 0 0 !important;
+	border-bottom: none !important;
+}*/
+#nav_sous_menu, nav ul li a, footer ul li a{
+	color: white;
+	font-size: 18px;
+}
+nav ul li a:hover {
+	color: darkred;
+	border-bottom: solid 2px;
+}
+
+/*** Style du sous-menu de navigation ***/
+
+nav .level-2 {
+	z-index: 9;
+	background-color: rgba(179,179,179,0.7);
+	position: absolute;
+	width: 184px;
+	/*width: 194px;
+    background-color: rgb(201, 201, 201);*/
+    padding: 10px;
+    /* display: none; */
+    /*border-radius: 0px 0px 4px 4px;
+    border-right: solid 1px #939393;
+    border-bottom: solid 1px #939393;
+    border-left: solid 1px #939393;*/
+}
+nav .level-2 a {
+	font-size: 16px;
+}
+
+
+
+/************************************************************************************************************************
+
+														FOOTER
+
+************************************************************************************************************************/
+
+
+
+
+footer {
+	position: relative;
+	bottom: 0;
+	background-color: #717070;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	border-top: 3px solid #000000;
+}
+.footer {
+	margin: auto;
+	width: 80%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.footer > div {
+	width: 33%;
+}
+footer div h3, footer div p{
+	margin-bottom: 0;
+	text-align: unset;
+}
+footer p {
+	font-size: 12px !important;
+}
+footer img {
+	height: 50px;
+}
+
+
+
+/************************************************************************************************************************
+
+														ACCUEIL
+
+************************************************************************************************************************/
+
+
+/* ------------------------------------------------- STYLE GLOBALE -------------------------------------------------- */
+
+#accueil p {
+	font-size: 18px;
+}
+/*#accueil nav {
+	margin-bottom: 0;
+}*/
+
+/* ---------------------------------------------------- BANDEAU ----------------------------------------------------- */
+
+.img-accueil {
+	background-image: url('../img/bandeau-accueil.jpg');
+	height: 434px;
+	background-size: cover;
+}
+.message-accueil {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    padding: 2em 0;
+}
+.message-accueil p {
+	text-align: center;
+	width: 35%;
+	margin: auto;
+}
+.message-accueil h1 {
+	text-align: center;
+	color: #2C9AB7;
+}
+
+/* --------------------------------------------------- CALENDRIER --------------------------------------------------- */
+
+table.calendrier {
+	margin: auto;
+	border-collapse: collapse;
+    text-align: center;
+}
+.calendrier caption {
+	margin-bottom: 1em;
+}
+.calendrier caption i {
+	cursor: pointer;
+}
+.calendrier caption i.fa-chevron-left {
+	margin-left: 0;
+	margin-right: 1em;
+}
+.calendrier caption i.fa-chevron-right {
+	margin-left: 1em;
+}
+.calendrier tbody {
+	background-color: white;
+}
+.calendrier td {
+	padding: 0.5em;
+	border: solid 1px;
+}
+.previous-month, .next-month {
+	background-color: rgb(220, 220, 220);
+	color: rgb(130, 130, 130);
+}
+.aujourdhui {
+	background-color: rgb(203, 206, 250);
+}
+.jourEvent {
+	background-color: rgb(203, 250, 206);
+}
+
+#accueil .jc-bs3-container {
+	width: 70%;
+}
+#accueil .jconfirm-content h2 {
+	color: #2C9AB7;
+}
+
+/* -------------------------------------------------- MAIN CONTENT -------------------------------------------------- */
+
+.presentation {
+	width: 50%;
+}
+.presentation h1 {
+	text-align: center;
+}
+.actualites {
+	background: url('../img/bandeau_actu.png'), rgba(255,255,255,0.75);
+	background-size: cover;
+	background-blend-mode: lighten;
+}
+.actualites > div {
+	width: 30%;
+    margin: auto;
+    padding-bottom: 7%;
+    background: rgba(255,255,255,0.7);
+}
+.actualites h1 {
+	text-align: center;
+}
+.type_joueur > div {
+	width: 80%;
+	margin: auto;
+}
+.type_joueur h1, .activites h2 {
+	text-align: center;
+}
+.activites {
+	align-items: start;
+}
+.activites .activite {
+	width: 33%;
+}
+.activites .activite:first-child {
+	padding-right: 20px;
+}
+.activites .activite:last-child {
+	padding-left: 20px;
+}
+#accueil .activites p {
+	font-size: 16px;
+	margin-bottom: 0.5em;
+}
+#accueil .jeu_role > div, #accueil .jeu_societe > div {
+	width: 90%
+}
+#accueil .jeu_societe > div {
+	margin: auto;
+}
+#accueil .jeu_role > div > div, #accueil .jeu_societe > div > div {
+	width: 45%;
+	text-align: center;
+}
+#accueil .jeu_role > div p, #accueil .jeu_societe > div p {
+	text-align: center;
+}
+#accueil .jeu_role a, #accueil .jeu_societe a {
+	text-decoration: none;
+	font-size: 20px;
+	font-style: italic;
+	padding-bottom: 0.4em;
+}
+#accueil .jeu_role a:hover, #accueil .jeu_societe a:hover {
+	color: darkred;
+	border-bottom: solid 2px;
+}
+#accueil .jeu_role a {
+	color: rgb(51,51,51);
+}
+#accueil .jeu_societe a {
+	color: #FAFAFA;
+}
+#accueil .jeu_role aside, #accueil .jeu_societe aside {
+	width: 45%;
+}
+#accueil .jeu_role aside img, #accueil .jeu_societe aside img {
+	width: 100%;
+	border-radius: 100px;
+}
+#accueil .jeu_role aside img {
+	max-height: 500px;
+	max-width: 500px;
+	border-radius: 100px;
+}
+#accueil .jeu_societe aside img {
+	border-radius: 50px;
+}
+
+
+
+/************************************************************************************************************************
+
+														UNIVERS
+
+************************************************************************************************************************/
+
+
+
+#univers section ul {
+	padding-left: 40px;
+}
+#univers h1 {
+	text-align: center;
+}
+.img-univers {
+	background-image: url('../img/bandeau-univers.jpg');
+	height: 453px;
+	background-size: cover;
+	background-position: center;
+}
+.message-univers {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    padding: 2em 0;
+}
+.message-univers p {
+	text-align: center;
+	margin: auto;
+	width: 35%;
+	font-size: 18px;
+}
+.message-univers h1 {
+	color: #2C9AB7;
+	width: 55%;
+	margin: 0 auto 30px auto;
+}
+#univers article p {
+	font-size: 18px;
+}
+#univers .even-part > div {
+	width: 70%;
+	margin: auto;
+}
+.types-univers {
+	width: 80%;
+	margin: 50px auto;
+	align-items: start;
+}
+#univers .types-univers p {
+	font-size: 16px;
+}
+.types-univers .citation{
+	font-style: italic;
+}
+.types-univers .credit{
+	text-align: right;
+}
+.types-univers .credit span{
+	text-decoration: underline;
+}
+.types-univers > section {
+	text-align: center;
+	max-width: 45%;
+}
+.types-univers > section h2 {
+	text-align: center;
+	color: #2C9AB7;
+}
+.types-univers > section img {
+	width: 100%;
+}
+
+
+
+/************************************************************************************************************************
+
+														JEUX
+
+************************************************************************************************************************/
+
+
+
+#jeux p, .nos_jeux ul {
+	font-size: 18px;
+}
+.img-jeux {
+	background-image: url('../img/jeux.jpg');
+	height: 434px;
+	background-size: cover;
+}
+.message-jeux {
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.6);
+    padding: 2em 0;
+}
+.message-jeux p {
+	text-align: center;
+	margin: auto;
+	width: 35%;
+	font-size: 18px;
+}
+.message-jeux h1 {
+	text-align: center;
+	color: #2C9AB7;
+	width: 55%;
+	margin: 0 auto 30px auto;
+}
+#jeux .informations p {
+	color: darkred;
+	font-size: 16px;
+}
+.nos_jeux {
+	width: fit-content;
+	width: -moz-fit-content;
+	margin: 50px auto;
+}
+.nos_jeux a {
+	text-decoration: none;
+	color: inherit;
+}
+.nos_jeux a:hover {
+	color: darkred;
+	border-bottom: solid 2px;
+}
+#jeux .jeu {
+	width: 90%;
+	margin: auto;
+	padding: 2em 0;
+    border-bottom: solid 2px #B3B3B3;
+}
+#jeux .jeu:last-child {
+	padding: 2em 0 0 0;
+    border-bottom: none;
+}
+#jeux .jeu h1 {
+	text-align: center;
+}
+#jeux .jeu p {
+	width: 50%;
+}
+#jeux .jeu img {
+	width: 25%;
+}
+
+
+
+/************************************************************************************************************************
+
+														CONTACT
+
+************************************************************************************************************************/
+
+
+
+#contact section {
+	width: 80%;
+	margin: 2em auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#contact section h3 {
+	color: #2C9AB7;
+}
+#contact section p {
+	margin-bottom: 0;
+	font-size: 16px;
+}
+#contact section .informations div {
+	margin-bottom: 2em;
+}
+
+
+
+/************************************************************************************************************************
+
+														ESPACE MEMBRE
+
+************************************************************************************************************************/
+
+
+
+#espace_membre h1 {
+	margin-bottom: 10px;
+}
+#espace_membre h2 {
+	margin-bottom: 40px;
+}
+#espace_membre input {
+	width: 100%;
+	margin-bottom: 2em;
+}
+#espace_membre input#mdp {
+	margin-bottom: 0;
+}
+#espace_membre input[type="submit"] {
+	width: auto;
+}
+#espace_membre div.connexion {
+	width: 50%;
+    background-color: rgba(193,202,230,0.2);
+    margin: auto;
+    align-items: start;
+    box-shadow: 1px -1px 10px;
+    border-radius: 4px;
+}
+#espace_membre div.connexion > div {
+	width: 50%;
+	padding: 0 20px;
+    margin: 20px 0;
+}
+#espace_membre div.connexion > div:first-child {
+	border-right: solid 1px #38444e;
+}
+#espace_membre div.connexion a.infos_oubliees {
+    color: #2C9AB7;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 2em;
+    font-size: 10px;
+}
+#espace_membre div.connexion a.infos_oubliees:hover {
+	text-decoration: underline;
+}
+#espace_membre div.connexion a {
+	text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+
+
+
+/************************************************************************************************************************
+
+													INFORMATIONS OUBLIEES
+
+************************************************************************************************************************/
+
+
+
+#infos_oubliees input {
+	width: 90%;
+	margin-bottom: 1em;
+}
+#infos_oubliees input[type="submit"] {
+	display: block;
+	margin: auto;
+	width: auto;
+}
+
+
+
+/************************************************************************************************************************
+
+													RECUPERATION COMPTE
+
+************************************************************************************************************************/
+
+
+
+#recup_compte label {
+	display: inline-block;
+	width: 30%;
+}
+#recup_compte input {
+	width: 65%;
+	margin-bottom: 1em;
+}
+#recup_compte input[type="submit"] {
+	display: block;
+	margin: auto;
+	width: auto;
+}
+
+
+
+/************************************************************************************************************************
+
+														INSCRIPTION
+
+************************************************************************************************************************/
+
+
+
+#inscription .content {
+	width: 30%;
+}
+#inscription h1 {
+	margin-bottom: 10px;
+}
+#inscription h2 {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+#inscription input {
+	width: 90%;
+	margin-bottom: 2em;
+}
+#inscription input[type="submit"] {
+	width: auto;
+}
+i {
+	margin-left: 0.5em;
+}
+
+
+
+/************************************************************************************************************************
+
+														MON COMPTE
+
+************************************************************************************************************************/
+
+
+
+#compte h1 {
+	text-align: center;
+}
+
+#compte .profil > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+#compte .profil .role .admin {
+	margin-right: 2.75em;
+}
+
+img.avatar {
+	width: 200px;
+	height: auto;
+}
+.profil .img-avatar {
+	margin-bottom: 3em;
+}
+.profil .img-avatar > div {
+	width: 200px;
+    height: 200px;
+}
+.profil .img-avatar form {
+	position: absolute;
+}
+.profil .img-avatar .select-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    opacity: 0;
+    z-index: 2;
+}
+.profil .img-avatar .submit-img {
+    margin-left: 3em;
+}
+.profil .avatar-content {
+    position: relative;
+}
+.profil .avatar-content > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #B3B3B3;
+    color: white;
+    padding: 10px;
+    opacity: 0;
+    border: 1px solid #5d5c5c;
+}
+
+
+
+/************************************************************************************************************************
+
+														MEMBRE
+
+************************************************************************************************************************/
+
+
+
+.membres .avatar-content {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-bottom: 0.75em;
+}
+.membres > div {
+	width: 30%;
+	text-align: center;
+	margin-bottom: 2.5em;
+}
+.membres > div p {
+	margin: auto;
+	text-align: center;
+}
+.membre {
+	text-decoration: none;
+	color: rgb(51,51,51);
+}
+
+
+
+/************************************************************************************************************************
+
+														PERSONNAGE
+
+************************************************************************************************************************/
+
+
+
+#personnage h1 {
+	text-align: center;
+}
+
+#personnage button.ajout {
+	display: block;
+	margin: 1em auto 0 auto;
+}
+
+.personnages h2.perso {
+	margin-top: 30px;
+	margin-bottom: 0;
+	padding-bottom: 20px;
+	color: #2C9AB7;
+	font-weight: bold;
+	text-align: left;
+}
+
+.border-perso {
+	padding-left: 20px;
+    border-left: solid #2C9AB7 2px;
+}
+
+.personnages > div > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.personnages > div {
+	padding-bottom: 30px;
+    border-bottom: solid 2px #B3B3B3;
+    margin-top: 30px;
+}
+
+.personnages > div:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.personnages .description-perso {
+	width: 40%;
+}
+
+.personnages .info-perso {
+	width: 15%;
+	text-align: center;
+}
+
+.personnages .image-perso {
+	width: 25%;
+}
+
+.personnages .image-perso > *, .personnages .info-perso > input {
+	width: 100%;
+}
+
+.personnages .image-perso > input, .personnages .info-perso > input {
+	margin: 0.5em 0 1.5em 0;
+}
+
+.personnages .description-perso fieldset {
+	padding: 1em;
+}
+.personnages .description-perso fieldset legend {
+	margin-bottom: 0.75em;
+}
+
+.personnages form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.personnages form .item-1, .personnages form .item-3{
+	width: 25%;
+}
+.personnages form .item-2{
+	width: 45%;
+}
+.personnages textarea{
+	width: 100%;
+}
+
+[name*=envoyer-perso] {
+	margin: auto;
+}
+
+.personnages form[id*="save_modif_perso"] {
+	width: fit-content;
+	width: -moz-fit-content;
+    margin: auto;
+}
+
+.personnages form > div {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-bottom: 30px;
+}
+
+
+
+/************************************************************************************************************************
+
+														QUETE
+
+************************************************************************************************************************/
+
+
+
+#quete h1 {
+	text-align: center;
+}
+#quete textarea {
+	width: 90%;
+}
+.quetes button {
+	margin-bottom: 2em;
+}
+.quetes form {
+	margin: 1em 0 2em 0;
+}
+#quete section ul {
+	padding-left: 40px;
+	margin-bottom: 1.5em;
+}
+.quete-cours > ul > li {
+	margin-bottom: 3em;
+}
+.quetes .add-quete input, .quetes .add-quete textarea {
+	margin-bottom: 1.5em;
+}
+.participants {
+	list-style: none;
+}
+.participants li span:hover {
+	color: #2C9AB7;
+	cursor: pointer;
+}
+
+/*Fenêtre modal quêtes*/
+
+#quete .jc-bs3-container {
+	width: 90%;
+}
+#quete .jconfirm-title-c {
+	text-align: center;
+	font-size: 32px;
+}
+#quete .jconfirm-content .flex {
+	justify-content: space-between;
+}
+#quete .jconfirm-content .flex .image-perso {
+	width: 25%;
+}
+#quete .jconfirm-content .flex .description-perso {
+	width: 50%;
+}
+#quete .jconfirm-content .flex .info-perso {
+	width: 15%;
+	text-align: center;
+}
+
+
+
+/************************************************************************************************************************
+
+														PUCES
+
+************************************************************************************************************************/
+
+
+
+.puces {
+	display: flex;
+	flex-wrap: wrap;
+}
+.puce {
+	width: 49%;
+	margin-bottom: 2em;
+	margin-right: 1%;
+}
+.puce:hover {
+	cursor: pointer;
+	background-color: #e9e9e9;
+	transition: ease-out 0.2s;
+}
+.puce > div > div {
+	display: flex;
+	justify-content: space-between;
+}
+.puce h2 {
+	color: #2C9AB7;
+}
+.puce h4 {
+	font-weight: bold;
+}
+.puce h4 > span {
+	font-size: 16px;
+	font-weight: normal;
+	color: royalblue;
+}
+.puce h4 > span > span {
+	color: purple;
+}
+.libre {
+	color: green;
+}
+.indisponible {
+	color: #B3B3B3;
+}
+.cout {
+	font-style: italic;
+}
+.flex-column.add-sort {
+	align-items: normal;
+}
+#puce textarea {
+	min-height: 10em;
+}
+#puce form > textarea, #puce fieldset {
+	width: 90%;
+}
+#puce form > fieldset {
+	margin: 2em 0;
+}
+#puce fieldset > div {
+	width: 80%;
+	margin: auto;
+	padding: 1.5em;
+}
+#puce input:required, #puce textarea:required {
+	border: solid 1px orange;
+}
+#preview-puce .puce {
+	margin: auto;
+}
+#modify-add-sort {
+	margin: auto;
+}
+#puce #modif-puce > div {
+	width: 90%;
+}
+#puce #modif-puce > div > fieldset {
+	width: 85%;
+}
+
+/*Fenêtre modal puces*/
+
+#puce .jc-bs3-container {
+	width: 90%;
+}
+#puce .jconfirm-title-c {
+	text-align: center;
+	font-size: 32px;
+}
+#puce .jconfirm-content > div > select, #puce .jconfirm-content > div > p {
+	text-align: center;
+}
+#puce .button-attribution {
+	position: absolute;
+	left: 14px;
+}
+
+
+
+/************************************************************************************************************************
+
+													ADMIN EVENT
+
+************************************************************************************************************************/
+
+
+
+#admin_event button.ajout {
+	display: block;
+	margin: 1em auto 0 auto;
+}
+#admin_event textarea {
+	width: 50%;
+}
